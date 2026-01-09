@@ -14,7 +14,7 @@ public interface MemberMapper {
 
     List<MemberDTO> findAll();
 
-    int update(MemberDTO memberDTO);
+    String update(MemberDTO memberDTO);
 
     int delete(int id);
 }
