@@ -27,7 +27,7 @@ public class MemberController {
         model.addAttribute("list", getList);
     }
 
-    @GetMapping("/update/{id}")
+    @GetMapping("/update/{memberId}")
     public String updateForm(@PathVariable int memberId, Model model){
         MemberDTO memberDTO = memberService.findById(memberId);
         model.addAttribute("member", memberDTO);
