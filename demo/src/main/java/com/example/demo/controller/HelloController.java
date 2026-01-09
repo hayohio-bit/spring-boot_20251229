@@ -9,7 +9,6 @@ public class HelloController {
     public String literal(Model model){
         model.addAttribute("data", "Spring!");
         return "basic/literal";
-
     }
 
 
