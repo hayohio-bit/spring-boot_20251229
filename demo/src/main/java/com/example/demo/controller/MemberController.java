@@ -36,7 +36,7 @@ public class MemberController {
 
     @PostMapping("/update")
     public String updatePost(MemberDTO memberDTO){
-        
+        memberService
     }
 
 
