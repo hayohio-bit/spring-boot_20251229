@@ -40,6 +40,9 @@ public class MemberController {
         return "redirect:/member/list";
     }
 
-    @GetMapping
+    @PostMapping("/delete/{id}")
+    public int delete(@PathVariable int id){
+        
+    }
 
 }
