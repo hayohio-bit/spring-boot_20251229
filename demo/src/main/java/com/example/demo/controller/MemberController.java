@@ -28,8 +28,8 @@ public class MemberController {
 
     @GetMapping("/update/{id}")
     public String updateForm(@PathVariable int id, Model model){
-        log.info("id : " + id);
         MemberDTO memberDTO = memberService.findById(id);
+        log.info("id : " + id);
         return "member/updateForm";
     }
 
