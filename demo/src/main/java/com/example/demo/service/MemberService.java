@@ -25,9 +25,10 @@ public class MemberService {
 
     public void update(MemberDTO memberDTO){
         memberMapper.update(memberDTO);
-        return "redirect:/member/list";
     }
 
-    public String delete()
+    public String delete(memberId){
+
+    }
 
 }
