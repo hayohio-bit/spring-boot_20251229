@@ -33,5 +33,5 @@ public class MemberController {
         model.addAttribute("param1", "data1");
         model.addAttribute("param2", "data2");
     }
-    
+
 }
