@@ -28,6 +28,7 @@ public class MemberController {
 
     @GetMapping("/update/{id}")
     public String updateForm(@PathVariable int id, Model model){
+        
         return "member/updateForm";
     }
 
