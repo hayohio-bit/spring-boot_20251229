@@ -35,7 +35,9 @@ public class MemberController {
     }
 
     @PostMapping("/update")
-    public String updatePost
+    public String updatePost(MemberDTO memberDTO){
+        
+    }
 
 
 }
