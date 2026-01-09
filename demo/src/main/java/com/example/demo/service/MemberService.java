@@ -28,4 +28,6 @@ public class MemberService {
         return "redirect:/member/list";
     }
 
+    
+
 }
