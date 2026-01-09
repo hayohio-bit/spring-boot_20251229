@@ -30,7 +30,7 @@
 
     <delete id="delete" parameterType="int">
         delete from member
-        where member_id = #{memberId}
+        where member_id = #{id}
     </delete>
 
 </mapper>
