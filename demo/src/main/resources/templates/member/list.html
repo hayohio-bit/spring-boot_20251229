@@ -24,7 +24,7 @@
               <a th:href="@{/member/update/{id}(id=${member.memberId})}">
                   <button>수정</button></a>
               <a th:href="@{/member/delete/{id}(id=${member.memberId})}"
-                th:onclick="">
+                th:onclick="return confirm">
                   <button>삭제</button></a>
           </td>
       </tr>
