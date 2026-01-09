@@ -31,4 +31,8 @@ public class MemberService {
         memberMapper.delete(memberId);
     }
 
+    public void insert(MemberDTO memberDTO){
+        
+    }
+
 }
