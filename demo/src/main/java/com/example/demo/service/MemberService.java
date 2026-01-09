@@ -21,7 +21,6 @@ public class MemberService {
 
     public MemberDTO findById(int memberId){
         return memberMapper.findById(memberId);
-
     }
 
 }
