@@ -81,11 +81,11 @@
 
 <div class="table-wrapper">
 
+    <form th:action="@{/member/list}" method="get">
+        <input type="text" name="keyword" placeholder="이름 검색">
+        <button type="submit">검색</button>
+    </form>
     <div class="actions-top">
-        <form th:action="@{/member/list}" method="get">
-            <input type="text" name="keyword" placeholder="이름 검색">
-            <button type="submit">검색</button>
-        </form>
         <a th:href="@{/member/insert}" class="btn btn-primary">회원 등록</a>
     </div>
     <table>
