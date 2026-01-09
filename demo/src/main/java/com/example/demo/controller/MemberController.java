@@ -40,7 +40,7 @@ public class MemberController {
         return "redirect:/member/list";
     }
 
-    @PostMapping("/delete/{id}")
+    @PostMapping("/delete/{memberId}")
     public String delete(@PathVariable int memberId){
         memberService.delete(memberId);
         return "redirect:/member/list";
