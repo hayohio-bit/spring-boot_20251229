@@ -30,7 +30,6 @@ public class MemberController {
     public String updateForm(@PathVariable int id, Model model){
         MemberDTO memberDTO = memberService.findById(id);
         model.addAttribute("member", memberDTO);
-        log.info("id : " + id);
         return "member/updateForm";
     }
 
