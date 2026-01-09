@@ -10,7 +10,7 @@ public interface MemberMapper {
 
     int insert(MemberDTO memberDTO);
 
-    MemberDTO findById(int id);
+    MemberDTO findById(int memberId);
 
     List<MemberDTO> findAll();
 
