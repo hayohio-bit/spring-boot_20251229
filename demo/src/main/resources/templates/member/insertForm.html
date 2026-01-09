@@ -3,19 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <title>회원 등록</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .form-container {
+      max-width: 400px;
+    }
+    .form-row {
+      margin-bottom: 10px;
+    }
+    label {
+      display: inline-block;
+      width: 70px;
+    }
+    input {
+      width: 250px;
+      padding: 6px;
+      box-sizing: border-box;
+    }
+    .btn {
+      padding: 6px 12px;
+      border: 1px solid #3498db;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .btn-secondary {
+      background-color: #95a5a6;
+      border-color: #95a5a6;
+    }
+    .actions {
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
+
 <h2>회원 등록</h2>
 
-<form th:action="@{/member/insert}" method="post">
-  이름: <input type="text" name="name"><br>
-  나이: <input type="number" name="age"><br>
-  주소: <input type="text" name="address"><br>
-  전화: <input type="text" name="phone"><br>
-  <button type="submit">등록</button>
-</form>
+<div class="form-container">
+  <form th:action="@{/member/insert}" method="post">
+    <div class="form-row">
+      <label>이름</label>
+      <input type="text" name="name">
+    </div>
+    <div class="form-row">
+      <label>나이</label>
+      <input type="number" name="age">
+    </div>
+    <div class="form-row">
+      <label>주소</label>
+      <input type="text" name="address">
+    </div>
+    <div class="form-row">
+      <label>전화</label>
+      <input type="text" name="phone">
+    </div>
 
-<a th:href="@{/member/list}">목록으로</a>
+    <div class="actions">
+      <button type="submit" class="btn">등록</button>
+      <a th:href="@{/member/list}" class="btn btn-secondary">목록</a>
+    </div>
+  </form>
+</div>
 
 </body>
 </html>
