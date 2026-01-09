@@ -42,7 +42,7 @@ public class MemberController {
 
     @PostMapping("/delete/{id}")
     public int delete(@PathVariable int id){
-        
+        memberService.delete(id);
     }
 
 }
