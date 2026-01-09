@@ -34,10 +34,6 @@ public class MemberController {
         return "member/updateForm";
     }
 
-    @PostMapping("/update")
-    public String updatePost(MemberDTO memberDTO){
-        memberService.update(memberDTO);
-        return null;
-    }
+
 
 }

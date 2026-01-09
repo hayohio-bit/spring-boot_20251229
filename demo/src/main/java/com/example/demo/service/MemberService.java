@@ -23,4 +23,6 @@ public class MemberService {
         return memberMapper.findById(memberId);
     }
 
+    public
+
 }
