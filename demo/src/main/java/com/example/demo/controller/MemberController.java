@@ -53,6 +53,6 @@ public class MemberController {
 
     @PostMapping("/insert")
     public String insertPost(MemberDTO memberDTO){
-
+        
     }
 }
