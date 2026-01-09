@@ -7,9 +7,9 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Controller
@@ -24,9 +24,11 @@ public class MemberController {
         log.info("List-------------");
         List<MemberDTO> getList = memberService.getList();
         model.addAttribute("list", getList);
-
-        model.addAttribute("localDateTime", LocalDateTime.now());
     }
 
+    @GetMapping("/update/{id}")
+    public String updateForm(@PathVariable int id, Model model){
+        return "member/updateForm";
+    }
 
 }
