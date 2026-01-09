@@ -19,4 +19,9 @@ public class MemberService {
         return memberMapper.findAll();
     }
 
+    public MemberDTO findById(int memberId){
+        return memberMapper.findById(memberId);
+
+    }
+
 }
