@@ -32,7 +32,7 @@ public class MemberService {
     }
 
     public void insert(MemberDTO memberDTO){
-        
+        memberMapper.insert(memberDTO);
     }
 
 }
