@@ -15,10 +15,10 @@
         values(#{name}, #{age}, #{address}, #{phone})
     </insert>
 
-    <select id="findById" resultType="id">
+    <select id="findById" resultType="MemberDTO">
         select member_id, name, age, address, phone
         from member
-        where member_id = #{id}
+        where member_id = #{memberId}
     </select>
 
     <update id="update" parameterType="MemberDTO">
