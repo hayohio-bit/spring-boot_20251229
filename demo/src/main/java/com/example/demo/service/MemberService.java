@@ -28,7 +28,7 @@ public class MemberService {
     }
 
     public void delete(int memberId){
-        memberMapper.delete(id);
+        memberMapper.delete(memberId);
     }
 
 }
