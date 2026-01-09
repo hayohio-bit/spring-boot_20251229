@@ -25,7 +25,7 @@ public class MemberService {
 
     public void update(MemberDTO memberDTO){
         memberMapper.update(memberDTO);
-
+        return "redirect:/member/list";
     }
 
 }
