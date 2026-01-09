@@ -23,6 +23,8 @@ public class MemberService {
         return memberMapper.findById(memberId);
     }
 
-    public
+    public void update(MemberDTO memberDTO){
+        return memberMapper.update(memberDTO);
+    }
 
 }
