@@ -20,7 +20,6 @@ public class MemberController {
     @GetMapping("/list")
     public void list(@RequestParam(required = false) String keyword,
                      Model model){
-        log.info("List-------------");
         List<MemberDTO> getList = memberService.getList();
         model.addAttribute("list", getList);
     }
