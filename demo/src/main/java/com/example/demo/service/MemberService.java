@@ -24,7 +24,7 @@ public class MemberService {
     }
 
     public void update(MemberDTO memberDTO){
-        return memberMapper.update(memberDTO);
+        memberMapper.update(memberDTO);
     }
 
 }
