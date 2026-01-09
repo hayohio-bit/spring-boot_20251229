@@ -47,8 +47,12 @@ public class MemberController {
     }
 
     @GetMapping("/insert")
-    public String insert(){
-        return "redirect:/member/insert";
+    public String insertForm(){
+        return "member/insertForm";
     }
 
+    @PostMapping("/insert")
+    public String insertPost(MemberDTO memberDTO){
+        
+    }
 }
