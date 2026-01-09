@@ -6,10 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,7 +18,8 @@ public class MemberController {
     private final MemberService memberService;
 
     @GetMapping("/list")
-    public void list(Model model){
+    public void list(@RequestParam(required = false) String keyword,
+                     Model model){
         log.info("List-------------");
         List<MemberDTO> getList = memberService.getList();
         model.addAttribute("list", getList);
