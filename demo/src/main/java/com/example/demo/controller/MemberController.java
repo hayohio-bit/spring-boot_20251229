@@ -29,7 +29,7 @@ public class MemberController {
 
     @GetMapping("/update/{id}")
     public String updateForm(@PathVariable int id, Model model){
-        MemberDTO memberDTO = memberService.findById(memberId);
+        MemberDTO memberDTO = memberService.findById(id);
         model.addAttribute("member", memberDTO);
         return "member/updateForm";
     }
