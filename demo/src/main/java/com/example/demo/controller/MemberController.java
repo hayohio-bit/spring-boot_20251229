@@ -48,7 +48,7 @@ public class MemberController {
 
     @GetMapping("/insert")
     public String insert(){
-        
+        return "redirect:/member/insert";
     }
 
 }
