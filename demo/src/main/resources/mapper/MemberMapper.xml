@@ -15,7 +15,7 @@
         values(#{name}, #{age}, #{address}, #{phone})
     </insert>
 
-    <select id="findById" resultType="MemberDTO">
+    <select id="findById" parameterType="int" resultType="MemberDTO">
         select member_id, name, age, address, phone
         from member
         where member_id = #{memberId}
