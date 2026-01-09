@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Controller
@@ -23,5 +24,13 @@ public class MemberController {
         log.info("List-------------");
         List<MemberDTO> getList = memberService.getList();
         model.addAttribute("list", getList);
+
+        model.addAttribute("localDateTime", LocalDateTime.now());
+    }
+
+    @GetMapping("/link")
+    public void link(Model model){
+        model.addAttribute("param1", "data1");
+        model.addAttribute("param2", "data2");
     }
 }

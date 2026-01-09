@@ -16,16 +16,21 @@
     </insert>
 
     <select id="findById" resultType="MemberDTO">
-        select *
+        select member_id, name, age, address, phone
         from member
-        where member_id=#{memberId}
+        where member_id = #{memberId}
     </select>
 
     <update id="update" parameterType="MemberDTO">
         update member
-        set name=#{name}, age=#{age}, address=#{address}, phone=#{phone}
-        where member_id=#{memberId}
+        set name = #{name} , age = #{age},
+        address = #{address}, phone = #{phone}
+        where member_id = #{memberId}
     </update>
 
+    <delete id="delete">
+        delete from member
+        where member_id = #{memberId}
+    </delete>
 
 </mapper>

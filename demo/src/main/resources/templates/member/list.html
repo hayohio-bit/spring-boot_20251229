@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -27,6 +27,9 @@
       </tr>
   </table>
 
+  <span th:text="${localDateTime}"></span><br>
+  <span th:text="${#temporals.format(localDateTime, 'yyyy-MM-dd HH:mm:ss')}"></span>
+  <br>
 <br>
 </body>
 </html>
