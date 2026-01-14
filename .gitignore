@@ -1,20 +1,22 @@
 HELP.md
 .git
 .gitignore
-.gradle
+.gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 *.gradle
+*.gradle.kts
 gradlew
+gradlew.bat
 
 ### STS ###
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 bin/
@@ -22,7 +24,7 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -39,3 +41,23 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Logs ###
+*.log
+logs/
+spring-boot.log
+*.log.*
+
+### Database ###
+*.db
+*.h2.db
+*.mv.db
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Compiled classes ###
+*.class
+*.jar
+*.war
