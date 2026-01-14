@@ -8,8 +8,6 @@ build/
 !**/src/test/**/build/
 *.gradle
 *.gradle.kts
-gradlew
-gradlew.bat
 
 ### STS ###
 .apt_generated
