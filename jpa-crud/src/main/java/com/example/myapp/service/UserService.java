@@ -42,5 +42,11 @@ public class UserService {
         user.changeEmail(email);
 
         // 3) @Transactional 덕분에 메서드가 끝날 때 변경 내용이 자동으로 DB에 반영(더티 체킹)
+        return user;
+    }
+
+    // ==== 4. 회원 삭제 ====
+    public void delete(Long id){
+        
     }
 }
