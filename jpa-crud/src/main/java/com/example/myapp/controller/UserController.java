@@ -21,6 +21,7 @@ public class UserController {
     @PostMapping    // POST /api/users
     public User create(@RequestBody User user){
         return userService.create(user);
+        // JSON -> User -> 저장 후 저장된 User 반환
     }
 
 
