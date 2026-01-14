@@ -4,7 +4,6 @@ import com.example.demo.domain.MemberDTO;
 import com.example.demo.mapper.MemberMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.apache.ibatis.javassist.compiler.ast.Keyword;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +15,7 @@ public class MemberService {
 
     private final MemberMapper memberMapper;
 
-    public List<MemberDTO> getList(Keyword){
+    public List<MemberDTO> getList(){
         return memberMapper.findAll();
     }
 
