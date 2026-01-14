@@ -1,7 +1,6 @@
 package com.example.jpa2.domain;
 
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
