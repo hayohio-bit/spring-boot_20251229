@@ -39,4 +39,8 @@ public class User {
         return id;
     }
 
+    public String getPassword(){
+        return password;
+    }
+
 }
