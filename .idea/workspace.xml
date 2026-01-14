@@ -5263,7 +5263,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.spring boot_20251229 [:jpa2:bootRun]">
+  <component name="RunManager" selected="Spring Boot.JpaApplication">
     <configuration name="jpa2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -5353,8 +5353,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.spring boot_20251229 [:jpa2:bootRun]" />
         <item itemvalue="Spring Boot.JpaApplication" />
+        <item itemvalue="Gradle.spring boot_20251229 [:jpa2:bootRun]" />
         <item itemvalue="Gradle.jpa2" />
       </list>
     </recent_temporary>
