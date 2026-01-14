@@ -10,7 +10,7 @@ description = 'jpa'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)  // Spring Boot 3.3+ 권장
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
