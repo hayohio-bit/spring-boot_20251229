@@ -17,6 +17,6 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     // DB의 AUTO_INCREMENT 기능을 사용하는 PK 자동 생성 전략 설정
     public Long id;
-    // 각 User 레코
+    // 각 User 레코드를 
 
 }
