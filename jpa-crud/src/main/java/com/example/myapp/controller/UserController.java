@@ -2,10 +2,7 @@ package com.example.myapp.controller;
 
 import com.example.myapp.domain.User;
 import com.example.myapp.service.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController                     // JSON 기반 REST 컨트롤러
 @RequestMapping("/api/users")    // 공통 URL prefix
@@ -25,7 +22,10 @@ public class UserController {
     }
 
     // ==== 2. 회원 단건 조회 ====
-    
+    @GetMapping("/{id}")    // GET /api/users/{id}
+    public User get(@PathVariable int id){
+        
+    }
 
 
 }
