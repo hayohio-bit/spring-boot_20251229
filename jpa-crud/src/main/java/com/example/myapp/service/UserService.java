@@ -27,6 +27,8 @@ public class UserService {
     @Transactional(readOnly = true) // 조회 성능 최적화 용도
     public User get(Long id){
         // id로 User 조회, 없으면 예외 던지기
+        return userRepository.findById(id)
+                .orElseThrow(()-> new IllegalArgumentException("User not found. id=" + id));
         
     }
 }
