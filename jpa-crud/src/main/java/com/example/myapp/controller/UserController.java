@@ -11,7 +11,7 @@ public class UserController {
     private final UserService userService;  // 서비스 의존성
 
     public UserController(UserService userService){
-        
+        this.userService = userService;
     }
 
 
