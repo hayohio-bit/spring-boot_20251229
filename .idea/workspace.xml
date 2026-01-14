@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d2030253-13be-4a26-8315-65bcf96497db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
@@ -229,7 +230,7 @@
       <option name="presentableId" value="Default" />
       <updated>1768363285958</updated>
       <workItem from="1768363287003" duration="547000" />
-      <workItem from="1768363847664" duration="1076000" />
+      <workItem from="1768363847664" duration="1239000" />
     </task>
     <servers />
   </component>
