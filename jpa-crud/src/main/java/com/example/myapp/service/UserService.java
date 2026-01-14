@@ -9,5 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserService {
 
     private final UserRepository userRepository;
-    // User 
+    // User 리포지토리 의존성
+
+    
 }
