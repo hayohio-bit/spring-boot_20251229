@@ -23,5 +23,7 @@ public class User {
     private String email;
 
     protected User(){}
+    // JPA가 프록시 생성 시 사용하기 위한 기본 생성자
+    // 외부에서 직접 생성하지 못하도록 protected
 
 }
