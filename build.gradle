@@ -1,12 +1,12 @@
 plugins {
     id 'java'
     id 'org.springframework.boot' version '4.0.1'
-    id 'io.spring.dependency-management' version '1.1.7'
+    id 'io.spring.dependency-management' version '1.1.7' apply false
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-description = 'jpa'
+description = 'spring-boot_20251229'
 
 java {
     toolchain {
@@ -17,7 +17,6 @@ java {
 allprojects {
     repositories {
         mavenCentral()
-        gradlePluginPortal()
     }
 }
 
@@ -25,45 +24,52 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
-    apply plugin: 'jacoco'  // 코드 커버리지
+
+    group = 'com.example'
+    version = project.version
+    description = project.name
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+    }
 
     dependencies {
-        // Spring Boot 기본
-        implementation 'org.springframework.boot:spring-boot-starter'
-        implementation 'org.springframework.boot:spring-boot-starter-web'  // REST API
-        implementation 'org.springframework.boot:spring-boot-starter-validation'  // @Valid
+        // Spring Boot 핵심 (jpa build 참조)
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+        implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 
-        // 데이터베이스
-        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  // JPA/Hibernate
-        runtimeOnly 'com.mysql:mysql-connector-j:9.1.0'  // MySQL (사용자 선호)
-        runtimeOnly 'com.h2database:h2'  // H2 테스트 DB
-
-        // 개발 도구
+        // Lombok
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
+
+        // 개발/런타임
         developmentOnly 'org.springframework.boot:spring-boot-devtools'
+        runtimeOnly 'com.mysql:mysql-connector-j:9.1.0'  // 최신 MySQL
 
-        // 테스트
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
-        testImplementation 'org.testcontainers:junit-jupiter:1.20.2'  // 컨테이너 테스트
-        testImplementation 'org.testcontainers:mysql:1.20.2'
-        testRuntimeOnly 'com.h2database:h2'
-
-        // 로깅/유틸
-        implementation 'org.springframework.boot:spring-boot-starter-logging'
-        implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'  // LocalDateTime
+        // 테스트 (jpa build 참조)
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        testImplementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+        testImplementation 'org.springframework.boot:spring-boot-starter-webmvc'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     }
 
     tasks.named('test') {
         useJUnitPlatform()
-        systemProperty 'spring.profiles.active', 'test'
     }
 
+    // 루트/하위 bootJar 비활성 (필요 시 모듈별 활성)
     bootJar {
-        enabled = false  // 루트 빌드 비활성
-    }
-
-    jar {
-        enabled = true
+        enabled = false
     }
 }
