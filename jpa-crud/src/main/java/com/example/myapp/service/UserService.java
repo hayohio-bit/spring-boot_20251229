@@ -47,6 +47,6 @@ public class UserService {
 
     // ==== 4. 회원 삭제 ====
     public void delete(Long id){
-        userRepository.deleteById(id);
+        userRepository.deleteById(id); // 해당 id의 User를 DB에서 삭제
     }
 }
