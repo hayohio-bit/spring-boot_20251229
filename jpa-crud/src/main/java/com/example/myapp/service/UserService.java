@@ -49,4 +49,7 @@ public class UserService {
     public void delete(Long id){
         userRepository.deleteById(id); // 해당 id의 User를 DB에서 삭제
     }
+    
+    // ==== 5. 회원 목록 + 페이징 조회 ====
+    
 }
