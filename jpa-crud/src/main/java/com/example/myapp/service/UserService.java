@@ -2,6 +2,8 @@ package com.example.myapp.service;
 
 import com.example.myapp.domain.User;
 import com.example.myapp.repository.UserRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -51,5 +53,8 @@ public class UserService {
     }
     
     // ==== 5. 회원 목록 + 페이징 조회 ====
-    
+    @Transactional(readOnly = true)
+    public Page<User> getList(Pageable pageable){
+        
+    }
 }
