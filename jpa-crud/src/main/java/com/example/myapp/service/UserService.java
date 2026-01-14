@@ -41,6 +41,6 @@ public class UserService {
         user.changePassword(password);
         user.changeEmail(email);
 
-        // 3) 
+        // 3) @Transac
     }
 }
