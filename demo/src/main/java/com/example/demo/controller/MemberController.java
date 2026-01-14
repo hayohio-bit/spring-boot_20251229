@@ -20,7 +20,7 @@ public class MemberController {
     @GetMapping("/list")
     public void list(@RequestParam(required = false) String keyword,
                      Model model){
-        List<MemberDTO> getList = memberService.getList(keyword);
+        List<MemberDTO> getList = memberService.WgetList(keyword);
         model.addAttribute("list", getList);
     }
 
