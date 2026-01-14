@@ -55,6 +55,6 @@ public class UserService {
     // ==== 5. 회원 목록 + 페이징 조회 ====
     @Transactional(readOnly = true)
     public Page<User> getList(Pageable pageable){
-        
+
     }
 }
