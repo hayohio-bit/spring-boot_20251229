@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 수정</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        h2 { margin-bottom: 20px; }
+        .form-group { margin-bottom: 12px; }
+        label { display: block; margin-bottom: 4px; font-weight: bold; }
+        input { width: 100%; padding: 8px; box-sizing: border-box; }
+        .btn { padding: 8px 12px; text-decoration: none; border-radius: 4px; font-size: 14px; border: none; cursor: pointer; }
+        .btn-save { background-color: #28a745; color: white; }
+        .btn-cancel { background-color: #6c757d; color: white; margin-left: 5px; }
+        .btn-wrap { margin-top: 16px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>👤 회원 정보 수정</h2>
+
+    <form th:action="@{/members/edit/{id}(id=${member.memberId})}"
+          th:object="${member}"
+          method="post">
+
+        <div class="form-group">
+            <label>ID</label>
+            <input type="text" th:field="*{memberId}" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>이름</label>
+            <input type="text" th:field="*{name}">
+        </div>
+
+        <div class="form-group">
+            <label>나이</label>
+            <input type="number" th:field="*{age}">
+        </div>
+
+        <div class="form-group">
+            <label>주소</label>
+            <input type="text" th:field="*{address}">
+        </div>
+
+        <div class="form-group">
+            <label>전화번호</label>
+            <input type="text" th:field="*{phone}">
+        </div>
+
+        <div class="btn-wrap">
+            <button type="submit" class="btn btn-save">저장</button>
+            <a th:href="@{/members/list}" class="btn btn-cancel">목록</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
