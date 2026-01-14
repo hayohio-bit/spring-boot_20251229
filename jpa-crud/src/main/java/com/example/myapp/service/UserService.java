@@ -23,4 +23,9 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    // ==== 2. 회원 단건 조회 ====
+    @Transactional(readOnly = true) // 조회 성능 최적화 용도
+    public User get(Long id){
+        
+    }
 }
