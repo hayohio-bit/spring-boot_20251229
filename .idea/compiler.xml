@@ -10,9 +10,7 @@
         </processorPath>
         <module name="spring-boot_20251229.demo.main" />
         <module name="spring-boot_20251229.jpa.main" />
-        <module name="spring-boot_20251229.jpa2.main" />
         <module name="spring-boot_20251229.jpa.test" />
-        <module name="spring-boot_20251229.jpa2.test" />
         <module name="spring-boot_20251229.demo.test" />
       </profile>
     </annotationProcessing>
