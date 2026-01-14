@@ -55,7 +55,7 @@ public class MemberController {
     }
 
     @GetMapping("/delete/{memberId}")
-    public String getDelete(@PathVariable int MemberId){
+    public String getDelete(@PathVariable int memberId){
         memberService.delete(MemberId);
         return "redirect:/members/list";
     }
