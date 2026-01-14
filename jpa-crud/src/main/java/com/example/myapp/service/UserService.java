@@ -41,6 +41,6 @@ public class UserService {
         user.changePassword(password);
         user.changeEmail(email);
 
-        // 3) @Transac
+        // 3) @Transactional 덕분에 메서드가 끝날 때 변경 내용이 자동으로 DB에 반영(더티 체킹)
     }
 }
