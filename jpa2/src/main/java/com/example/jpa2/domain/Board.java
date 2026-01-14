@@ -8,16 +8,5 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor
-public class Board extends BoardEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(length = 500, nullable = false)
-    private String title;
-
-    @Column(columnDefinition = "TEXT", nullable = false)
-    private String content;
-
-
+public class Board{
 }
