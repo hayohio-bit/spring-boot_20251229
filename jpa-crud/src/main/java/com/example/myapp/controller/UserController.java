@@ -33,7 +33,7 @@ public class UserController {
     @PostMapping("/{id}")   // POST /api/users/{id}
     public User update(@PathVariable Long id, Model model){
         model.addAttribute(model);
-        
+        return "redirect:/api/list";
     }
 
 
