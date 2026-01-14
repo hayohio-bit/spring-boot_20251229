@@ -25,7 +25,7 @@ public class UserController {
     @GetMapping("/{id}")    // GET /api/users/{id}
     public User get(@PathVariable Long id){
         return userService.get(id);
-        //
+        // id로 단건 조회
     }
 
 
