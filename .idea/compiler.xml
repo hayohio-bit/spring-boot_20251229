@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.6">
+      <module name="demo" target="21" />
+      <module name="jpa" target="21" />
+      <module name="jpa.main" target="21" />
+      <module name="jpa.test" target="21" />
+      <module name="jpa2" target="21" />
+      <module name="jpa2.main" target="21" />
+      <module name="jpa2.test" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+      <module name="jpa" options="-parameters" />
+      <module name="jpa.main" options="-parameters" />
+      <module name="jpa.test" options="-parameters" />
+      <module name="jpa2" options="-parameters" />
+      <module name="jpa2.main" options="-parameters" />
+      <module name="jpa2.test" options="-parameters" />
+      <module name="spring-boot_20251229.jpa.main" options="-parameters" />
+      <module name="spring-boot_20251229.jpa.test" options="-parameters" />
+      <module name="spring-boot_20251229.jpa2.main" options="-parameters" />
+      <module name="spring-boot_20251229.jpa2.test" options="-parameters" />
+    </option>
+  </component>
+</project>
