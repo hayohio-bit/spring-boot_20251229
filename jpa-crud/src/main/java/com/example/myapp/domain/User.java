@@ -45,4 +45,9 @@ public class User {
         return email;
     }
 
+    // 변경 메서드 (의미 있는 변경만 허용)
+    public void changeUsername(String username){
+        this.username = username;
+    }
+
 }
