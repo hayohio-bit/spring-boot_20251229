@@ -7,12 +7,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 // PK 생성 전략(IDENTITY, SEQUENCE 등)을 정의하는 열거형
 import jakarta.persistence.Id;
+import lombok.Getter;
 
 @Entity
 // 이 클래스를 DB 테이블과 매핑되는 JPA 엔티티로 지정
 public class User {
 
+    // 조회 (getter)
     // 아래 필드가 User 엔티티의 기본 키임을 표시
+    @Getter
     @Id
     // DB의 AUTO_INCREMENT 기능을 사용하는 PK 자동 생성 전략 설정
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,10 +37,6 @@ public class User {
         this.email = email;
     }
 
-    // 조회 (getter)
-    public Long getId(){
-        return id;
-    }
     public String getPassword(){
         return password;
     }
