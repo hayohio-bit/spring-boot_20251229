@@ -15,13 +15,14 @@ public interface UserRepository extends JpaRepository<User, Long> {
 /*
 public interface UserRepository extends JpaRepository<User, Long>
 이 한 줄로 아래 메서드들이 자동으로 제공됨
-        User save(User user)
 
-        Optional<User> findById(Long id)
+User save(User user)
 
-        List<User> findAll()
+Optional<User> findById(Long id)
 
-        Page<User> findAll(Pageable pageable) ← 페이징
+List<User> findAll()
 
-        void deleteById(Long id)
-            */
+Page<User> findAll(Pageable pageable) ← 페이징
+
+void deleteById(Long id)
+    */
