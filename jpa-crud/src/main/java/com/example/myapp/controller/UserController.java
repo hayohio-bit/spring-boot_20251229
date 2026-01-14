@@ -30,7 +30,7 @@ public class UserController {
     }
 
     // ==== 3. 회원 수정 ====
-    @PutMapping("/{id}")   // POST /api/users/{id}
+    @PutMapping("/{id}")   // PUT /api/users/{id}
     public User update(@PathVariable Long id,
                        @RequestBody User request){
         // 요청으로 들어온 값들로 수정
