@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2030253-13be-4a26-8315-65bcf96497db" name="Changes" comment="" />
+    <list default="true" id="d2030253-13be-4a26-8315-65bcf96497db" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/jpa2/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa2/src/main/java/com/example/jpa2/Jpa2Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa2/src/main/java/com/example/jpa2/domain/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa2/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa2/src/test/java/com/example/jpa2/Jpa2ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +145,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "watcher.settings",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -250,7 +258,7 @@
       <option name="presentableId" value="Default" />
       <updated>1768363285958</updated>
       <workItem from="1768363287003" duration="547000" />
-      <workItem from="1768363847664" duration="1948000" />
+      <workItem from="1768363847664" duration="2090000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,3 @@
 rootProject.name = 'spring-boot_20251229'
 include 'demo'
 include 'jpa'
-include 'jpa2'
