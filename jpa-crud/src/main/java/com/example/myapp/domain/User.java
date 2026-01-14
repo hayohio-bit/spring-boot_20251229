@@ -34,4 +34,9 @@ public class User {
         this.email = email;
     }
 
+    // 조회 (getter)
+    public Long getId(){
+        return id;
+    }
+
 }
