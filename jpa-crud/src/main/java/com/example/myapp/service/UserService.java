@@ -20,7 +20,7 @@ public class UserService {
     // ==== 1. 회원 생성 ====
     public User create(User user){
         // JPA가 user를 영속성 컨텍스트에 저장하고, DB에 INSERT 수행
-        
+        return userRepository.sava(user);
     }
 
 }
