@@ -32,7 +32,7 @@ public class UserController {
     // ==== 3. 회원 수정 ====
     @PostMapping("/{id}")   // POST /api/users/{id}
     public User update(@PathVariable Long id,
-                       @RequestBody Model model){
+                       @RequestBody User requUser){
         model.addAttribute(model);
         return "redirect:/api/list";
     }
