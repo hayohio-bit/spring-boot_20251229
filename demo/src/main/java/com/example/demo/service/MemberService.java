@@ -15,7 +15,7 @@ public class MemberService {
 
     private final MemberMapper memberMapper;
 
-    public List<MemberDTO> getList(){
+    public List<MemberDTO> getList(String keyword){
         return memberMapper.findAll();
     }
 
