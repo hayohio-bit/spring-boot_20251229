@@ -4,6 +4,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController                     // JSON 기반 REST 컨트롤러
-@RequestMapping("/api/users")
+@RequestMapping("/api/users")    // 공통 URL prefix
 public class UserController {
 }
