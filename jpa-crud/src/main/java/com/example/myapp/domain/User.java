@@ -37,6 +37,7 @@ public class User {
     // 조회 (getter)
     public Long getId(){
         return id;
+        
     }
     public String getPassword(){
         return password;
