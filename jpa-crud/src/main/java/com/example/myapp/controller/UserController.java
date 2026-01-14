@@ -24,7 +24,7 @@ public class UserController {
     // ==== 2. 회원 단건 조회 ====
     @GetMapping("/{id}")    // GET /api/users/{id}
     public User get(@PathVariable int id){
-        
+        return userService.get(id);
     }
 
 
