@@ -11,5 +11,8 @@ public class UserService {
     private final UserRepository userRepository;
     // User 리포지토리 의존성
 
-    //
+    // 생성자 주입 (스프링이 UserRepository 구현체를 주입해 줌)
+    public UserService(UserRepository userRepository){
+        this.userRepository = userRepository;
+    }
 }
