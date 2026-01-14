@@ -1,6 +1,9 @@
 package com.example.myapp.controller;
 
+import com.example.myapp.domain.User;
 import com.example.myapp.service.UserService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +18,10 @@ public class UserController {
     }
 
     // ==== 1. 회원 생성 ====
-    
+    @PostMapping    // POST /api/users
+    public User create(@RequestBody User user){
+        return userService.create(user);
+    }
 
 
 }
