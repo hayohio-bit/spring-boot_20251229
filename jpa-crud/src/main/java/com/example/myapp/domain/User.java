@@ -49,7 +49,7 @@ public class User {
     }
 
     // 변경 메서드 change (단순 값 대입이 아니라 의미 있는 동작으로 만들기 위해 사용)
-    // change : 단순 값 대입이 아니라 의미 있는 동작으로 만들기 위해 사용
+    // changeXxx -> 규칙을 체크한 뒤 상태를 바꾸는 도메인 행동
     public void changeUsername(String username){
         this.username = username;
     }
