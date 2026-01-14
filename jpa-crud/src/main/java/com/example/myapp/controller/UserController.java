@@ -45,7 +45,7 @@ public class UserController {
     // ==== 4. 회원 삭제 ====
     @DeleteMapping("/{id}")     // DELETE /api/users/{id}
     public void delete(@PathVariable Long id){
-        
+        userService.delete(id);
     }
 
 
