@@ -56,7 +56,7 @@ public class UserController {
     public Page<User> list(@PageableDefault(size = 10)Pageable pageable){
         // Pageable은 page/size/sort 정보를 담은 객체
         return userService.getList(pageable);
-        // 페이징된 결과(Page<User> 반환)
+        // 페이징된 결과(Page<User>) 반환
     }
 
 
