@@ -2,6 +2,9 @@ package com.example.myapp.controller;
 
 import com.example.myapp.domain.User;
 import com.example.myapp.service.UserService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,7 +51,11 @@ public class UserController {
         userService.delete(id);
     }
 
-    // ==== 
+    // ==== 5. 회원 목록 + 페이징 ====
+    @GetMapping     // GET /api/users?page=0&size=10&sort=id,desc
+    public Page<User> list(@PageableDefault(size = 10)Pageable pageable){
+        
+    }
 
 
 }
