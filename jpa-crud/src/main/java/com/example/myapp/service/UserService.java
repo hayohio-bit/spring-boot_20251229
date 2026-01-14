@@ -26,6 +26,7 @@ public class UserService {
     // ==== 2. 회원 단건 조회 ====
     @Transactional(readOnly = true) // 조회 성능 최적화 용도
     public User get(Long id){
+        // id로 User 조회, 없으면 예외 던지기
         
     }
 }
