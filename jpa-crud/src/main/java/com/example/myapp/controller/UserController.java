@@ -58,6 +58,4 @@ public class UserController {
         return userService.getList(pageable);
         // 페이징된 결과(Page<User>) 반환
     }
-
-
 }
