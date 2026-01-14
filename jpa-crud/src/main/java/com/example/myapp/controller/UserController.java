@@ -34,8 +34,12 @@ public class UserController {
     public User update(@PathVariable Long id,
                        @RequestBody User request){
         // 요청으로 들어온 값들로 수정
-        model.addAttribute(model);
-        return "redirect:/api/list";
+        return userService.update(
+                id,
+                request.getUsername(),
+                request.getPassword(),
+                request.getEmail()
+        );
     }
 
 
