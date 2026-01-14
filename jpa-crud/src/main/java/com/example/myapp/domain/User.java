@@ -49,7 +49,7 @@ public class User {
     }
 
     // 변경 메서드 (의미 있는 변경만 허용)
-    // change
+    // change : 단순 값 대입이 아니라 의미 있는 동작으로 만들기 위해
     public void changeUsername(String username){
         this.username = username;
     }
