@@ -40,5 +40,7 @@ public class UserService {
         user.changeUsername(username);
         user.changePassword(password);
         user.changeEmail(email);
+
+        // 3) 
     }
 }
