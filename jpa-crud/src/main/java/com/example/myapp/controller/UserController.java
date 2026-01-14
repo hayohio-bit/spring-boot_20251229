@@ -54,7 +54,8 @@ public class UserController {
     // ==== 5. 회원 목록 + 페이징 ====
     @GetMapping     // GET /api/users?page=0&size=10&sort=id,desc
     public Page<User> list(@PageableDefault(size = 10)Pageable pageable){
-        
+        // Pageable은 page/size/sort 정보를 담은 객체
+        return userService.getList(pageable);
     }
 
 
