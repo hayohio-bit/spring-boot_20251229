@@ -29,6 +29,6 @@ public class UserService {
         // id로 User 조회, 없으면 예외 던지기
         return userRepository.findById(id)
                 .orElseThrow(()-> new IllegalArgumentException("User not found. id=" + id));
-        
+
     }
 }
