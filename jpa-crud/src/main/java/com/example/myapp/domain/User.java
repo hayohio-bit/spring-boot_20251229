@@ -48,7 +48,7 @@ public class User {
         return email;
     }
 
-    // 변경 메서드 change (의미 있는 변경만 허용)
+    // 변경 메서드 change (단순 값 대입이 아니라 의미 있는 동작으로 만들기 위해 사용)
     // change : 단순 값 대입이 아니라 의미 있는 동작으로 만들기 위해 사용
     public void changeUsername(String username){
         this.username = username;
