@@ -16,7 +16,11 @@ public class User {
     // 아래 필드가 User 엔티티의 기본 키임을 표시
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     // DB의 AUTO_INCREMENT 기능을 사용하는 PK 자동 생성 전략 설정
-    public Long id;
-    // 각 User 레코드를 
+    private Long id;
+    // 각 User 레코드를 유일하게 식별하는 ID 값
+    private String username;
+    private String password;
+    private String email;
+    
 
 }
