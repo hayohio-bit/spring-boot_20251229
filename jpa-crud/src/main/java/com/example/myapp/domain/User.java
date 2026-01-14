@@ -49,6 +49,7 @@ public class User {
     }
 
     // 변경 메서드 (의미 있는 변경만 허용)
+    // change
     public void changeUsername(String username){
         this.username = username;
     }
