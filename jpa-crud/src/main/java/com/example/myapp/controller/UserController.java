@@ -2,6 +2,7 @@ package com.example.myapp.controller;
 
 import com.example.myapp.domain.User;
 import com.example.myapp.service.UserService;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RestController                     // JSON 기반 REST 컨트롤러
@@ -26,6 +27,12 @@ public class UserController {
     public User get(@PathVariable Long id){
         return userService.get(id);
         // id로 단건 조회
+    }
+
+    // ==== 3. 회원 수정 ====
+    @PostMapping("/{id}")   // POST /api/users/{id}
+    public User update(@PathVariable Long id, Model model){
+        
     }
 
 
