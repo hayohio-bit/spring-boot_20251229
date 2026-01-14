@@ -55,6 +55,7 @@ public class UserService {
     // ==== 5. 회원 목록 + 페이징 조회 ====
     @Transactional(readOnly = true)
     public Page<User> getList(Pageable pageable){
-
+        // page, size, sort 정보가 담긴 Pageable을 사용해 페이징 조회
+        return userRepository.findAll(pageable);
     }
 }
