@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e540468e-044b-425f-b144-9773bcbedca3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/com/example/jpa/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/com/example/jpa/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,7 @@
       <workItem from="1768240897895" duration="678000" />
       <workItem from="1768262869340" duration="1427000" />
       <workItem from="1768360113391" duration="44000" />
-      <workItem from="1768360336036" duration="426000" />
+      <workItem from="1768360336036" duration="485000" />
     </task>
     <servers />
   </component>
