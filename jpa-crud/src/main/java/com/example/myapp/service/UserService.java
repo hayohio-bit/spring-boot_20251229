@@ -32,5 +32,7 @@ public class UserService {
     }
 
     // ==== 3. 회원 수정 ====
-    
+    public User update(Long id, String username, String password, String email){
+        
+    }
 }
