@@ -33,6 +33,12 @@ public class UserService {
 
     // ==== 3. 회원 수정 ====
     public User update(Long id, String username, String password, String email){
-        
+        // 1) 수정 대상 엔티티를 먼저 조회 (영속 상태)
+        User user = get(id);
+
+        // 2) 엔티티의 도메인 메서드로 상태 변경
+        user.changeUsername(username);
+        user.changePassword(password);
+        user.changeEmail(email);
     }
 }
