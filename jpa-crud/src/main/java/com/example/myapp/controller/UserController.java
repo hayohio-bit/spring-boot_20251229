@@ -24,5 +24,8 @@ public class UserController {
         // JSON -> User -> 저장 후 저장된 User 반환
     }
 
+    // ==== 2. 회원 단건 조회 ====
+    
+
 
 }
