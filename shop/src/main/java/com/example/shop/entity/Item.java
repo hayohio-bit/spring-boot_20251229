@@ -55,6 +55,7 @@ public class Item {
     // 수정 시간 : 상품이 마지막으로 수정된 시간
     private LocalDateTime updateTime;
 
+
     // =============== 팩토리 메서드 ===============
     // "상품 생성하기"를 한 번에 처리
     // static : 객체 생성 없이 Item.createItem()으로 호출 가능
@@ -74,15 +75,30 @@ public class Item {
 
     // =============== 비즈니스 로직 ===============
 
-    // 재고 증가 (반품 시 사용)
+    // 재고 증가 (반품／취소 시)
     public void addStock(int stockNumber){
         this.stockNumber += stockNumber;
     }
 
-    // 재고 감소 (구매 시 사용)
+    // 재고 감소 (구매 시)
     // throws : 예외 던지기 ="에러 상황 처리"
     public void removeStock(int stockNumber) {
+        int rest = this.stockNumber - stockNumber;
 
+        // 재고가 음수가 되면 불가능 (재고 부족)
+        if (rest < 0) {
+            throw new IllegalArgumentException("상품의 재고가 부족합니다.");
+        }
+
+        this.stockNumber = rest;
     }
 
+    // 상품 정보 수정
+    public void updateItem(String itemNm, int price, int stockNumber, String itemDetail) {
+        this.itemNm = itemNm;
+        this.price = price;
+        this.stockNumber = stockNumber;
+        this.itemDetail = itemDetail;
+        this.updateTime = LocalDateTime.now();
+    }
 }

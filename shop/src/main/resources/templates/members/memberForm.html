@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout1}">
+
+<div layout:fragment="content">
+    <h2>회원 가입</h2>
+
+    <form th:action="@{/members/new}" method="post" class="mt-4" style="max-width: 400px;">
+        <div class="mb-3">
+            <label for="email" class="form-label">이메일</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">비밀번호</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="name" class="form-label">이름</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="address" class="form-label">주소</label>
+            <input type="text" class="form-control" id="address" name="address" required>
+        </div>
+
+        <!-- 에러 메시지 표시 -->
+        <div th:if="${param.error}" class="alert alert-danger">
+            회원 가입에 실패했습니다. <span th:text="${param.error}"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">가입하기</button>
+    </form>
+</div>
+
+
+</html>

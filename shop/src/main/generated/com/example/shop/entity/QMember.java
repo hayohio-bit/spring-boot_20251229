@@ -28,11 +28,13 @@ public class QMember extends EntityPathBase<Member> {
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
+    public final StringPath name = createString("name");
+
     public final StringPath password = createString("password");
 
     public final DateTimePath<java.time.LocalDateTime> regTime = createDateTime("regTime", java.time.LocalDateTime.class);
 
-    public final EnumPath<Role> role = createEnum("role", Role.class);
+    public final EnumPath<com.example.shop.constant.Role> role = createEnum("role", com.example.shop.constant.Role.class);
 
     public final DateTimePath<java.time.LocalDateTime> updateTime = createDateTime("updateTime", java.time.LocalDateTime.class);
 

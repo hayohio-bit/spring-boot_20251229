@@ -5,8 +5,8 @@ package com.example.shop.constant;
 // 주문이 생성 및 배송, 완료될 때까지의 모든 과정을 표현
 public enum OrderStatus {
 
-    ORDER,      // 주문됨
-    CANCEL,     // 취소됨
-    DELIVERY    // 배송됨
+    ORDER,      // 주문
+    CANCEL,     // 취소
+    DELIVERY    // 배송
 
 }
