@@ -1,15 +1,16 @@
 package com.example.shop.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
 @Table(name = "order_item")
 @Getter
 @Setter
-@ToString
+@ToString(exclude = {"order", "item"})
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OrderItem {
 
     @Id
@@ -17,17 +18,17 @@ public class OrderItem {
     @Column(name = "order_item_id")
     private Long id;
 
-    // 어떤 상품인지
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "item_id")
-    private Item item;
-
-    // 어느 주문에 포함되어 있는지
+    // 어느 주문에 포함되어 있는지 : 양방향 관계 (Order ← OrderItem)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")
     private Order order;
 
-    // 구매 당시의 가격
+    // 어떤 상품인지 : Lazy Loading (Item은 별도로 조회)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "item_id", nullable = false)
+    private Item item;
+
+    // 주문 당시 상품 가격
     @Column(nullable = false)
     private int orderPrice;
 

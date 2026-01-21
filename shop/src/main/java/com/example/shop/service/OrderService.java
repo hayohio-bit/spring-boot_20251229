@@ -15,10 +15,12 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
+@Transactional(readOnly = true) // 이 클래스의 모든 메서드는 읽기 전용 트랜잭션으로 동작하게 설정
 public class OrderService {
 
+    // 의존성 주입 : 주문 관련 DB 작업을 수행하는 리포지토리
     private final OrderRepository orderRepository;
+    // 회원 정보 조회를 위한 리포지토리
     private final ItemRepository itemRepository;
     private final MemberRepository memberRepository;
 
